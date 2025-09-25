@@ -1,12 +1,10 @@
 let books = require('../data/bookDb');
 const { v4: uuidv4 } = require('uuid');
 
-// קבלת כל הספרים
 const getAllBooks = (req, res) => {
   res.json(books);
 };
 
-// קבלת ספר לפי id (UUID)
 const getBookById = (req, res) => {
   const id = req.params.id; 
   const book = books.find(b => b.id === id);
